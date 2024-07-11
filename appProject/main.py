@@ -10,9 +10,11 @@ my_label=tkinter.Label(
     text="first label",
     font=("Arial",24, "bold")
 )
+my_label.grid(column=0, row=0)
 
 def button_click():
-    my_label.config(text="button got click")
+    new_text=my_input.get()
+    my_label.config(text=new_text)
 
 
 #Button
@@ -20,12 +22,11 @@ my_button=tkinter.Button(
     text="click me",
     command=button_click
 )
+my_button.grid(column=1,row=1)
 
+#Entry
 my_input=tkinter.Entry(width=20)
-
-my_label.pack()
-my_button.pack()
-my_input.pack()
+my_input.grid(column=0,row=1)
 
 
 window.mainloop()
