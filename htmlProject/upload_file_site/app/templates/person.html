@@ -1,0 +1,12 @@
+{#사람 상세정보를 보여주는 페이지#}
+
+{% extends "base.html" %}
+{% block content %}
+    <h2>{{ person['이름'] }} 상세정보:</h2>
+    <ul>
+        <li>전화번호: {{ person['전화번호'] }}</li>
+        <li>취미: {{ person['취미']|join(', ') }}</li>
+        <li>자기 소개: {{ person['자기소개'] }}</li>
+    </ul>
+    <a href="{{ url_for('index') }}">목록으로 돌아가기</a>
+{% endblock %}

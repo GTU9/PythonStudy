@@ -1,0 +1,20 @@
+{#메인 페이지 html#}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>친구 찾기 앱</title>
+</head>
+<body>
+<div>
+    <h1> 친구 찾기 앱</h1>
+    <form action="{{ url_for('search') }}" method="post">
+        <label for="hobby">취미 검색:</label>
+        <input type="text" id="hobby" name="hobby">
+        <button type="submit">검색</button>
+    </form>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

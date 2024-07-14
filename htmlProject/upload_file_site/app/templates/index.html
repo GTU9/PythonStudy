@@ -1,0 +1,11 @@
+{#사람들 목록을 출력하는 html#}
+
+{% extends "base.html" %}
+{% block content %}
+    <h2>사람들 목록:</h2>
+    <ul>
+        {% for person in people %}
+            <li><a href="{{ url_for('person', id=loop.index0) }}">{{ person['이름'] }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
